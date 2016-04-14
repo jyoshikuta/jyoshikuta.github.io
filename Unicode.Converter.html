@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<head>
+ <meta charset="utf-8" />
 
 <!--liwenC2016-->
 <!-- skillu-->
-
-
-
 <title>Unicode Converter</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -29,7 +27,7 @@ BUTTON {padding: 0px; margin: 0; border: 0; background: #444; cursor: pointer; o
 BUTTON:hover {opacity: 1;}
 
 BUTTON img {height: 42px;}
-TEXTAREA {width: 651px; height: 40px; font-size: 14px;  border-radius:3px 0 0 3px; background: #e2e2e2; max-width: 651px;  line-height: 160%;}
+TEXTAREA {width: 651px; height: 40px; font-size: 14px;  border-radius:3px 0 0 3px; background: #e2e2e2; max-width: 651px;  min-width: 651px; min-height: 311px; max-height: 311px; line-height: 160%;}
 
 .content {width:700px; padding: 30px 10px 10px 10px; margin: 0 auto; background: #444; }
 
@@ -50,92 +48,81 @@ document.getElementById("chars").focus();
 
 
 <!-- <div class="content">-->
+<br>
 
-<a href="index.html">back to home</a>
+<input type="button" style="width:100px;height:20px;font-size:12px;"  onClick="parent.location='index.html'" value="back to home">
+
 <p>
 <font size="2">TEXT</font><br>
+<br>
+<br>
+
+
+<textarea id="chars" name="chars" rows="1" cols="5" style="background: #fff; height: 310px;"></textarea>
+<button onclick="convertChar2CP( chars.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
+
+<script type="text/javascript"> 
+function copyUrl0() 
+{ 
+var Url0=document.getElementById("chars"); 
+Url0.select(); // 選擇對象 
+document.execCommand("Copy"); // 執行瀏覽器複製命令 
+//alert("已複製好，可貼粘。"); 
+} 
+</script> 
+
+<button onclick="copyUrl0()" value="copy"><img src="Unicode-Converter/214489445332FB0133F5D9_2.png"></button>
 
 <br>
-<textarea id="chars" name="chars" rows="1" cols="5" style="background: #fff; height: 110px;"></textarea>
-<button onclick="convertChar2CP( chars.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
 <br>
 <br>
+
 
 <!--  *********** UTF-8 *********** -->
 <font size="2">UTF-8 code units</font><br>
+
 <br>
-<textarea id="UTF8" name="UTF8" rows="2" cols="5"></textarea>
+<br>
+
+<textarea id="UTF8" name="UTF8" rows="2" cols="5" style="height: 310px;"></textarea>
 <button onclick="convertUTF82CP( UTF8.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
+
+<button onclick="copyUrl1()" value="copy"><img src="Unicode-Converter/214489445332FB0133F5D9_2.png"></button>
+
+<script type="text/javascript"> 
+function copyUrl1() 
+{ 
+var Url1=document.getElementById("UTF8"); 
+Url1.select(); // 選擇對象 
+document.execCommand("Copy"); // 執行瀏覽器複製命令 
+//alert("已複製好，可貼粘。"); 
+} 
+</script> 
 
 
-<!--  *********** CODE POINTS *********** -->
-<font size="2">Hexadecimal code points</font><br>
+<br> 
+<br> 
+
+<textarea id="codePoints" name="codePoints" rows="1" cols="5" style="display:none;"></textarea>
 <br>
-<textarea id="codePoints" name="codePoints" rows="1" cols="5"></textarea>
-<button onclick="convertHex2CP( codePoints.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
+<textarea id="jEsc" name="jEsc" rows="1" cols="5" style="display:none;"></textarea>
 <br>
+<textarea id="Unicode" name="Unicode" rows="1" cols="5" style="display:none;"></textarea> 
+<br>
+<textarea id="pEsc" name="pEsc" rows="1" cols="5" style="display:none;"></textarea>
+<br>
+<textarea id="hexNCRs" name="hexNCRs" rows="1" cols="5" style="display:none;"></textarea>
+<br>
+<textarea id="decNCRs" name="decNCRs" rows="1" cols="5" style="display:none;"></textarea>
+<br>
+<textarea id="decCodePoints" name="decCodePoints" rows="1" cols="5" style="display:none;"></textarea>
+<br>
+<textarea id="UTF16" name="UTF16" rows="2" cols="5" style="display:none;"></textarea>
+<br>
+<textarea id="CSS" name="CSS" rows="2" cols="5" style="display:none;"></textarea>
 <br>
 
-
-<!--  *********** \ ESCAPES *********** -->
-<font size="2">JavaScript escapes</font><br>
-<br><textarea id="jEsc" name="jEsc" rows="1" cols="5"></textarea>
-<button onclick="convertjEsc2CP( jEsc.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-<!--  *********** U+ *********** -->
-<font size="2">Unicode U+hex notation</font><br>
-<br>
-<textarea id="Unicode" name="Unicode" rows="1" cols="5"></textarea> 
-<button onclick="convertUnicode2CP( Unicode.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-<!--  *********** % ESCAPES *********** -->
-<font size="2">Percent encoding for URIs</font><br>
-<br>
-<textarea id="pEsc" name="pEsc" rows="1" cols="5"></textarea>
-<button onclick="convertpEsc2CP( pEsc.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-<!--  *********** HEX NCRS *********** -->
-<font size="2">Hexadecimal NCRs</font><br>
-<br>
-<textarea id="hexNCRs" name="hexNCRs" rows="1" cols="5"></textarea>
-<button onclick="convertHexNCR2CP( hexNCRs.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-<!--  *********** DEC NCRS *********** -->
-<font size="2">Decimal NCRs</font><br>
-<br>
-<textarea id="decNCRs" name="decNCRs" rows="1" cols="5"></textarea>
-<button onclick="convertDecNCR2CP( decNCRs.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-
-
-
-<!--  *********** DEC CODE POINTS *********** -->
-<font size="2">Decimal code points</font><br>
-<br>
-<textarea id="decCodePoints" name="decCodePoints" rows="1" cols="5"></textarea>
-<button onclick="convertDec2CP( decCodePoints.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-
-<!--  *********** UTF-16 *********** -->
-<font size="2">UTF-16 code units</font><br>
-<br>
-<textarea id="UTF16" name="UTF16" rows="2" cols="5"></textarea>
-<button onclick="convertUTF162CP( UTF16.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-<br>
-<br>
-<!--  *********** CSS ESCAPES *********** -->
-<font size="2">CSS escapes</font><br>
-<br>
-<textarea id="CSS" name="CSS" rows="2" cols="5"></textarea>
-<button onclick="convertCSS2CP( CSS.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button></div>
+</div>
 <br>
 <br>
 
@@ -148,3 +135,5 @@ eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^
 <!-- killd -->
 				
 </html>
+
+

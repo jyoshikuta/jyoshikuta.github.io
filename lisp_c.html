@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>Lisp</title>
+
+<body>
+
+<form action="index.html" >
+  <button type="submit">back to home</button>
+</form>
+
+<br> 
+<br> 
+
+
+<script type="text/javascript"> 
+function copyUrl0() 
+{ 
+var Url0=document.getElementById("biao0"); 
+Url0.select(); // 選擇對象 
+document.execCommand("Copy"); // 執行瀏覽器複製命令 
+//alert("已複製好，可貼粘。"); 
+} 
+</script> 
+<textarea style="width:120px;height:100px;resize:none;" id="biao0">(defun foo ()
+  ())</textarea> 
+<input type="button"  style="width:120px;height:50px;font-size:20px;" onClick="copyUrl0()" value="　defun　" />
+
+<br> 
+
+<script type="text/javascript"> 
+function copyUrl1() 
+{ 
+var Url1=document.getElementById("biao1"); 
+Url1.select(); 
+document.execCommand("Copy"); 
+}
+</script> 
+<textarea style="width:120px;height:100px;resize:none;" id="biao1">(if ()
+    ()
+    ())</textarea> 
+<input  type="button" style="width:120px;height:50px;font-size:20px;" onClick="copyUrl1()" value="if" />
+
+
+
+
+<br> 
+
+</body>
+</html>
+
+
+<!--
+
+<form action="http://www.facebook.com/" >
+  <button type="submit">facebook</button>
+  <button type="submit" formtarget="_blank">facebook in a new tab</button>
+</form>
+
+
+<a href=欲開啟網頁位址.htm  
+     onclick="window.open('小視窗位址','小視窗名稱',
+                   config='height=小視窗高度,width=小視窗寬度')">
+超連結字串</a>
+
+
+
+<input type="button" style="width:120px;height:30px;font-size:20px;"  value="FACEBOOK" onclick="location.href='https://www.facebook.com/?ref=logo'" >
+
+>
+
