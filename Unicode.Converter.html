@@ -100,6 +100,56 @@ document.execCommand("Copy"); // 執行瀏覽器複製命令
 </script> 
 
 
+
+<script type="Text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+<button class="active">Z</button><button>Y</button><button>X</button>
+<br />
+
+
+<script type='text/javascript'>
+$('button').click(function() {
+    $('button').removeClass('active');
+    $(this).addClass('active');
+});
+</script>
+
+
+<script type='text/javascript'>
+$('textarea').bind('input propertychange', function() {
+    var text = $(this).val();
+    var activeFilter = $('button.active').html();
+    switch (activeFilter) {
+    case 'Z':
+        $(this).val(text.replace('z', ''));
+        break;
+    case 'Y':
+        $(this).val(text.replace('y', ''));
+        break;
+    case 'X':
+        $(this).val(text.replace('x', ''));
+        break;
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br> 
 <br> 
 
