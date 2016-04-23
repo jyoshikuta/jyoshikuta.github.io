@@ -5,13 +5,21 @@
           box-sizing: border-box;
 }
 
-div {
+#a001 {
     max-width: 800px;
-    margin: 20px auto; 
+    margin: 10px auto; 
     border: thick black solid;
     padding: 20px;
 }
- 
+
+#a002 {
+    max-width: 800px;
+    margin: 10px auto; 
+    border: thick gray solid;
+    padding: 20px;
+}
+
+
 input {
 type="button"
 width:140px;
