@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<title>test0</title>
+<title>楓さん大好き</title>
 <link rel="shortcut icon" href="/image/wicon.ico" type="image/x-icon" /> 
 
 <script>
@@ -30,50 +30,152 @@
 <!--body-->
 <body>
 
+
+
 <div id="a001">
 
-<h2  style="line-height: 0.2em;">test1</h2>
+<div style="text-align:center;" >
+
+<h2  style="line-height: 0.2em;">デレマス　楓さんのダジャレ諸々</h2>
 
 <!--<input type="button" style="width:140px;height:25px;font-size:14px;border:2px blue none;"  value="Lisp" onclick="window.open('lisp_c.html')" >-->
+
+<div id="button1">
 <input type="button"   value="Matching+" onclick="window.open('Matching +.swf')" >
 <input type="button"  value="Count Character" onclick="window.open('Count.Character.html')" >
 <input type="button"   value="Unicode Converter" onclick="window.open('Unicode.Converter.html')" >
 <input type="button"   value="Playfair Cipher" onclick="window.open('Playfair.Cipher_wen.swf')" >
+</div>
 
 <p style="font-size:6px;line-height:1em;"> </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CyckJW-zskw?rel=0&amp;vq=hd720" frameborder="0" allowfullscreen ></iframe>
-<br> 
+<div id="myYouTubeVideoPlayer1"></div>
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+ function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('myYouTubeVideoPlayer1', {
+    videoId: 'HPwL-5OEDkA', // YouTube ID
+    width: 560,               // 播放器寬度 (px)
+    height: 316,              // 播放器高度 (px)
+    playerVars: {
+      autoplay: 1,        // 在讀取時自動播放影片
+      controls: 1,        // 在播放器顯示暫停／播放按鈕
+      showinfo: 1,        // 隱藏影片標題
+      modestbranding: 1,  // 隱藏YouTube Logo
+      loop: 1,            // 影片循環播放
+      fs: 1,              // 顯示全螢幕按鈕
+      cc_load_policty: 0, // 隱藏字幕
+      iv_load_policy: 3,  // 隱藏影片註解
+      autohide: 1         // 播放影片時隱藏影片控制列
+    },
+    events: {
+      onReady: function(e) {
+        //e.target.mute();
+      }
+    }
+  });
+ }
+</script>
+</div>
+
+</div>
 
 </div>
 
 
 <div id="a002">
 
-<div style="width:600px;margin:0 auto;">
+<div style="width:600px;margin:0 auto;text-align:center;">
 
-<div style="text-align:center;" >
-<input type="button" style="height:25px;font-size:14px;border:2px blue none; text-align:center;" value="【偶像大师】高垣枫的「醉风」【人力VOCALOID】" onclick="window.open('http://www.bilibili.com/video/av2655483/')" >
+<input type="button" style="height:25px;font-size:14px;border:2px blue none; text-align:center;" value="こいかぜ楓voice早見沙織 " onclick="window.open('https://www.youtube.com/watch?v=aK2YdovaiK8')" >
+<p style="font-size:6px;line-height:1em;"> </p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aK2YdovaiK8?rel=0&amp;vq=hd720" frameborder="0" allowfullscreen ></iframe>
+
+<!--<p style="font-size:12px;line-height:1em;" align="center">center test</p>-->
+
 </div>
-
-<p style="font-size:12px;line-height:1em;"> </p>
-<embed quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=2655483&amp;page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" height="400" width="560">
-
-<p style="font-size:12px;line-height:1em;" align="center">置中test</p>
-</div>
-
 </div>
 
 <div  id="p001" style="width:800px;margin:0 auto;">
-<img  style="width:100%" src="image/Takagaki.jpg" >
-<a href="liwen66ii.html" title="liwen66ii"><img  class="fixed" src="image/Kaede.gif" ></a>
+<img  id="s001" style="width:100%" src="image/Takagaki.jpg" >
+<img  id="s002" class="fixed" src="image/Kaede.gif" >
 </div>
 
 
 </body>
 <!--body-->
 
+<script language="JavaScript">
 
+function $i(obj) {
+    if (document.getElementById) {return document.getElementById(obj);}
+    else {alert('瀏覽器不支持!');}}
+
+function l001( ) {window.open('liwen66ii.html', '', 'width=500,height=500');}
+
+
+var a1 = 0;
+
+$i("button1").setAttribute("style", "display:none;");
+
+$i("s002").addEventListener('click', function() {
+		 //document.bgColor="silver" ;
+if (a1 == 0) {
+	$i("button1").setAttribute("style", "display:visibility;");
+	a1 = 1;
+	$i("s001").addEventListener('click', l001, false);
+;}
+else {
+	$i("button1").setAttribute("style", "display:none;");
+	a1 = 0;
+	$i("s001").removeEventListener('click', l001, false);
+	//a1 =a1*-1;
+;}
+//UD1();
+}, false);
+
+
+/*
+
+function FN1() {a1=a1+1;UD1();}
+function UD1() {
+    $i("h1").textContent ='　a1:　'+ a1;
+    $i("h2").textContent ='　a2:　'+ a1*a1;
+    $i("h3").textContent ='　a3:　'+ a1*a1*a1;   
+}
+var a1 = 1;
+var myDiv = document.createElement('div');
+myDiv.id = 'block';
+myDiv.className = 'block';
+//myDiv.onclick = TF1;
+myDiv.setAttribute("style","height:200px;width: 200px;color: #000;background:#666;font-size:12px;position:fixed;top:20px;left:20px;opacity:0.9;");
+myDiv.innerHTML =
+    '<h id="h1" style="color:#FFF;font-size:12px;">　a1:</h><br><h id="h2" style="color:#000;font-size:12px;">　a2:</h><br><h id="h3" style="color:#FFF;font-size:12px;">　a3:</h><br>';
+document.body.appendChild(myDiv);  
+//document.getElementsByTagName('body')[0].appendChild(myDiv);
+var input_Button1=document.createElement("input");
+input_Button1.id="Button1";
+input_Button1.type="button";
+input_Button1.value="click";
+input_Button1.onclick = FN1;
+input_Button1.setAttribute("style", "font-size:12px;position:fixed;top:250px;left:20px;opacity:1;");
+document.body.appendChild(input_Button1);
+var input_Button2=document.createElement("input");
+input_Button2.id="Button2";
+input_Button2.type="button";
+input_Button2.value="reset";
+input_Button2.setAttribute("style", "font-size:12px;position:fixed;top:250px;left:80px;opacity:1;");
+document.body.appendChild(input_Button2);
+$i("Button2").addEventListener('click', function() {a1=0;UD1();}, false);
+
+*/
+
+
+
+
+</script>
 
 
 </html>
