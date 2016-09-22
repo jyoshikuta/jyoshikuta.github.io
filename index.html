@@ -49,15 +49,22 @@
 
 <p style="font-size:6px;line-height:1em;"> </p>
 
-<div id="myYouTubeVideoPlayer1"></div>
-<script async src="https://www.youtube.com/iframe_api"></script>
+<div id="ytplayer"></div>
 <script>
- function onYouTubeIframeAPIReady() {
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
   var player;
-  player = new YT.Player('myYouTubeVideoPlayer1', {
-    videoId: 'HPwL-5OEDkA', // YouTube ID
-    width: 560,               // 播放器寬度 (px)
-    height: 316,              // 播放器高度 (px)
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: '315',
+      width: '560',
+      videoId: 'HPwL-5OEDkA',
     playerVars: {
       autoplay: 1,        // 在讀取時自動播放影片
       controls: 1,        // 在播放器顯示暫停／播放按鈕
@@ -69,16 +76,9 @@
       iv_load_policy: 3,  // 隱藏影片註解
       autohide: 1         // 播放影片時隱藏影片控制列
     },
-    events: {
-      onReady: function(e) {
-        //e.target.mute();
-      }
-    }
-  });
- }
+    });
+  }
 </script>
-</div>
-
 </div>
 
 </div>
@@ -91,7 +91,8 @@
 <input type="button" style="height:25px;font-size:14px;border:2px blue none; text-align:center;" value="こいかぜ楓voice早見沙織 " onclick="window.open('https://www.youtube.com/watch?v=aK2YdovaiK8')" >
 <p style="font-size:6px;line-height:1em;"> </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aK2YdovaiK8?rel=0&amp;vq=hd720" frameborder="0" allowfullscreen ></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aK2YdovaiK8?rel=0&amp&vq=hd720&iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
+
 
 <!--<p style="font-size:12px;line-height:1em;" align="center">center test</p>-->
 
