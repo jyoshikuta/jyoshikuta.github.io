@@ -1,13 +1,17 @@
 <!DOCTYPE html>
+<!--liwenC2016-->
+
+<!-- head-->
 <head>
+
  <meta charset="utf-8" />
 
-<!--liwenC2016-->
-<!-- skillu-->
 <title>Unicode Converter</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<script language="JavaScript1.2" src="Unicode-Converter/cfile28.uf@272A044E5333012E2B6BE6" type="text/javascript"></script>
+<script language="JavaScript1.2" src="Unicode-Converter/Converter.js" type="text/javascript"></script>
+<script type="Text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 
 <style type="text/css">
 
@@ -17,95 +21,84 @@ html, body {
   margin: 0; padding: 0px;
   color: #ccc;
   line-height: 50%;
-background: #444; 
+  background: #444; 
 }
-
 .title2 {font-size: 20px;  color: #fff;  line-height: 200%; font-weight: bold; }
 .title2 a {font-size: 11px;  color: #fff;  font-weight: bold; }
-
 BUTTON {padding: 0px; margin: 0; border: 0; background: #444; cursor: pointer; opacity: 0.5; outline:none;}
 BUTTON:hover {opacity: 1;}
-
-BUTTON img {height: 42px;}
+BUTTON img {height: 35px;}
 TEXTAREA {width: 651px; height: 40px; font-size: 14px;  border-radius:3px 0 0 3px; background: #e2e2e2; max-width: 651px;  min-width: 651px; min-height: 311px; max-height: 311px; line-height: 160%;}
+.content {width:900px; padding: 30px 10px 10px 10px; margin: 0 auto; background: #444; }
 
-.content {width:700px; padding: 30px 10px 10px 10px; margin: 0 auto; background: #444; }
-
-
-#XML {display: none;}
 </style>
 
-<script language="javascript">
-document.addEventListener('DOMContentLoaded', function () {
-document.getElementById("chars").focus();
-});
-</script>
+</head>
+<!-- head-->
 
 
 <table align="center" border="0" cellpadding="0" cellspacing="0">
+ <td valign="top">
 
-  <td valign="top">
 
-
-<!-- <div class="content">-->
+<div class="content">
 <br>
 
 <input type="button" style="width:100px;height:20px;font-size:12px;"  onClick="parent.location='index.html'" value="back to home">
 
+<!--  *********** TEXT *********** -->
 <p>
 <font size="2">TEXT</font><br>
-<br>
-<br>
-
+<p/>
 
 <textarea id="chars" name="chars" rows="1" cols="5" style="background: #fff; height: 310px;"></textarea>
-<button onclick="convertChar2CP( chars.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
 
 <script type="text/javascript"> 
 function copyUrl0() 
 { 
 var Url0=document.getElementById("chars"); 
-Url0.select(); // 選擇對象 
-document.execCommand("Copy"); // 執行瀏覽器複製命令 
-//alert("已複製好，可貼粘。"); 
+Url0.select(); 
+document.execCommand("Copy"); 
 } 
+function clearUrl0(){
+     document.getElementById("chars").value = "";
+}
 </script> 
 
-<button onclick="copyUrl0()" value="copy"><img src="Unicode-Converter/214489445332FB0133F5D9_2.png"></button>
-
-<br>
-<br>
-<br>
+<button onclick="convertChar2CP( chars.value ); return false;" value="Convert"><img src="Unicode-Converter/CP1.png"></button>
+<button onclick="copyUrl0()" value="copy"><img src="Unicode-Converter/CP2.png"></button>
+<button onclick="clearUrl0()" value="clear"><img src="Unicode-Converter/CP3.png"></button>
 
 
 <!--  *********** UTF-8 *********** -->
+<p>
 <font size="2">UTF-8 code units</font><br>
+<p/>
 
-<br>
-<br>
-
-<textarea id="UTF8" name="UTF8" rows="2" cols="5" style="height: 310px;"></textarea>
-<button onclick="convertUTF82CP( UTF8.value ); return false;" value="Convert"><img src="Unicode-Converter/214489445332FB0133F5D9.png"></button>
-
-<button onclick="copyUrl1()" value="copy"><img src="Unicode-Converter/214489445332FB0133F5D9_2.png"></button>
+<textarea id="UTF8" name="UTF8" rows="1" cols="5" style="height: 310px;"></textarea>
 
 <script type="text/javascript"> 
 function copyUrl1() 
 { 
 var Url1=document.getElementById("UTF8"); 
-Url1.select(); // 選擇對象 
-document.execCommand("Copy"); // 執行瀏覽器複製命令 
-//alert("已複製好，可貼粘。"); 
+Url1.select(); 
+document.execCommand("Copy"); 
 } 
+function clearUrl1(){
+     document.getElementById("UTF8").value = "";
+}
 </script> 
 
+<button onclick="convertUTF82CP( UTF8.value ); return false;" value="Convert"><img src="Unicode-Converter/CP1.png"></button>
+<button onclick="copyUrl1()" value="copy"><img src="Unicode-Converter/CP2.png"></button>
+<button onclick="clearUrl1()" value="clear"><img src="Unicode-Converter/CP3.png"></button>
 
 
-<script type="Text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<br>
 
-<button class="active">Z</button><button>Y</button><button>X</button>
-<br />
-
+<button class="active">Z</button>
+<button>Y</button>
+<button>X</button>
 
 <script type='text/javascript'>
 $('button').click(function() {
@@ -113,7 +106,6 @@ $('button').click(function() {
     $(this).addClass('active');
 });
 </script>
-
 
 <script type='text/javascript'>
 $('textarea').bind('input propertychange', function() {
@@ -134,55 +126,10 @@ $('textarea').bind('input propertychange', function() {
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br> 
-<br> 
-
-<textarea id="codePoints" name="codePoints" rows="1" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="jEsc" name="jEsc" rows="1" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="Unicode" name="Unicode" rows="1" cols="5" style="display:none;"></textarea> 
-<br>
-<textarea id="pEsc" name="pEsc" rows="1" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="hexNCRs" name="hexNCRs" rows="1" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="decNCRs" name="decNCRs" rows="1" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="decCodePoints" name="decCodePoints" rows="1" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="UTF16" name="UTF16" rows="2" cols="5" style="display:none;"></textarea>
-<br>
-<textarea id="CSS" name="CSS" rows="2" cols="5" style="display:none;"></textarea>
-<br>
-
 </div>
-<br>
-<br>
 
-<textarea id="XML" name="XML" type="hidden"></textarea> 
 
-<script>
-eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0 7=1.2(\'7\');0 4=1.2(\'4\');0 5=1.2(\'5\');0 6=1.2(\'6\');0 e=1.2(\'e\');0 8=1.2(\'8\');0 9=1.2(\'9\');0 a=1.2(\'a\');0 b=1.2(\'b\');0 c=1.2(\'c\');0 d=1.2(\'d\');0 3=1.2(\'3\');',15,15,'var|document|getElementById|XML|decCodePoints|UTF8|UTF16|codePoints|decNCRs|Unicode|pEsc|jEsc|chars|CSS|hexNCRs'.split('|'),0,{}))
-</script>
 
-<!-- killd -->
 				
 </html>
 
