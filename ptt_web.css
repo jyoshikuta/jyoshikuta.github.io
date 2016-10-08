@@ -1,0 +1,62 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document regexp(".*ptt.cc.*") {
+  
+
+  .btn-group-dir{position: relative;top: 40px!important;}
+  
+  #navigation-container{display:none !important;}
+
+  #action-bar-container{ position: fixed;top: -40px!important;}
+
+}
+
+
+@-moz-document regexp("https://www.ptt.cc/bbs/.*M..*") {
+ 
+  /**/  
+}
+
+
+@-moz-document regexp("https://www.ptt.cc/bbs/.*/index.*") {
+ 
+  .meta,.nrec{font-size:100%;}
+ 
+  .r-ent {margin:  0px;}
+  
+  .bbs-screen {color: hsla(350, 0%, 50%, 0.5);line-height: 100%;word-wrap: break-word;}
+  
+
+  
+  .meta{position: relative;left: 20px!important;}
+  
+  /*.date,.author,.r-list-sep{display:none !important;}*/
+  /* .bbs-screen, #topbar, #navigation, .action-bar, #article-polling {min-width: 50px;max-width: 1000px*/
+  
+}
+
+
+
+
+
+/*
+
+@-moz-document domain("ptt.cc") {
+  
+  .action-bar{position: relative;top: -35px!important;}
+
+  .btn-group-paging{position: relative;top: -40px!important;}
+  
+  #action-bar-container{ position: fixed;  top: 95%  !important;}
+  
+  #navigation-container{display:none !important;}
+  
+  .meta{height: 10px !important;}
+
+@-moz-document regexp("https://www.ptt.cc/bbs.*index.*") {
+ 
+  .bbs-screen{position: relative;top: -50px!important;}
+
+}
+
+*/
