@@ -2,7 +2,6 @@
 
 @-moz-document regexp(".*ptt.cc.*") {
   
-  
   #navigation-container{display:none !important;}
 
 }
@@ -16,12 +15,8 @@
 
 @-moz-document regexp("https://www.ptt.cc/bbs/.*/index.*") {
  
-  .meta,.nrec{font-size:100%;}
+  .meta,.nrec{font-size:70%;}
  
-  .r-ent {margin:  0px;}
-  
   .bbs-screen {color: hsla(350, 0%, 50%, 0.5);line-height: 100%;word-wrap: break-word;}
- 
-  .meta{position: relative;left: 20px!important;}
   
 }
