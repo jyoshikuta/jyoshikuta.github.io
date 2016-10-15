@@ -1,18 +1,6 @@
 <!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" dir="ltr" lang="en-US">
-<![endif]-->
-<!--[if IE 7]>
-<html id="ie7" dir="ltr" lang="en-US">
-<![endif]-->
-<!--[if IE 8]>
-<html id="ie8" dir="ltr" lang="en-US">
-<![endif]-->
-<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+
 <html dir="ltr" lang="en-US">
-<!--<![endif]-->
-
-
 
 <!--head-->
 <head>
@@ -30,17 +18,23 @@
   ga('send', 'pageview');
 </script>
 
-<script type="text/javascript">
- document.createElement('header');
- document.createElement('nav');
- document.createElement('menu');
- document.createElement('section');
- document.createElement('article');
- document.createElement('aside');
- document.createElement('footer');
-</script>
-
-
+<!--[if lt IE 9]>
+  <script>
+    document.createElement("header" );
+    document.createElement("footer" );
+    document.createElement("section"); 
+    document.createElement("aside"  );
+    document.createElement("nav"    );
+    document.createElement("article"); 
+    document.createElement("hgroup" ); 
+    document.createElement("time"   );
+  </script>
+  <noscript>
+     <strong>Warning !</strong>
+     Because your browser does not support HTML5, some elements are created using JavaScript.
+     Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+  </noscript>
+<![endif]-->
 
 <link rel="stylesheet" type="text/css" href="indexframe.css">
 
@@ -49,9 +43,7 @@
 
 
 
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<![endif]-->
+
 </head>    
 <!--head-->
 
