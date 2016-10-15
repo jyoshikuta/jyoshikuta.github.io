@@ -31,10 +31,9 @@
 <body>
 
 
-
 <div id="a001">
 
-<div style="text-align:center;" >
+<div style="width:600px;margin:0 auto;text-align:center;">
 
 <h2  style="line-height: 0.2em;">こいかぜ</h2>
 
@@ -49,37 +48,11 @@
 
 <p style="font-size:6px;line-height:1em;"> </p>
 
-<div id="ytplayer"></div>
-<script>
-  // Load the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+<video id="movie" autoplay preload controls loop poster="Kaede1.mp4_.jpg" width="600" height="337.5">
+  <source src="Kaede1.mp4" type="video/mp4" />
+  Your browser doesn't support the <video> tag.
+</video>
 
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '315',
-      width: '560',
-      videoId: 'DNhNF2ZnGu4',
-    playerVars: {
-	  rel:0,
-      autoplay: 1,        // 在讀取時自動播放影片
-      controls: 1,        // 在播放器顯示暫停／播放按鈕
-      showinfo: 1,        // 隱藏影片標題
-      modestbranding: 1,  // 隱藏YouTube Logo
-      loop: 1,            // 影片循環播放
-      fs: 1,              // 顯示全螢幕按鈕
-      cc_load_policty: 0, // 隱藏字幕
-      iv_load_policy: 3,  // 隱藏影片註解
-      autohide: 1         // 播放影片時隱藏影片控制列
-    },
-    });
-  }
-</script>
 </div>
 
 </div>
@@ -92,8 +65,10 @@
 <input type="button" style="height:25px;font-size:14px;border:2px blue none; text-align:center;" value="デレマス　楓さんのダジャレ諸々 " onclick="window.open('https://www.youtube.com/watch?v=HPwL-5OEDkA')" >
 <p style="font-size:6px;line-height:1em;"> </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HPwL-5OEDkA?rel=0&amp&vq=hd720&iv_load_policy=3" frameborder="0" allowfullscreen ></iframe>
-
+<video id="movie" preload controls  loop poster="Kaede2.mp4_.jpg" width="600" height="337.5">
+  <source src="Kaede2.mp4" type="video/mp4" />
+  Your browser doesn't support the <video> tag.
+</video>
 
 <!--<p style="font-size:12px;line-height:1em;" align="center">center test</p>-->
 
