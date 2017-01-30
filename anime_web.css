@@ -1,0 +1,47 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document regexp(".*myself-bbs.com.*")  {
+  
+  body{background:#333333 url() no-repeat center 0;background-attachment: fixed;}
+  
+  #scbar{display:none !important;}
+  .bml{display:none !important;}
+  #scrolltop{display:none !important;}
+  
+  .head_logo {padding-top: 0px;}
+  .head_yn {height: 160px;}
+  
+  .c_yt{display:none !important;}
+  
+
+}
+
+@-moz-document regexp(".*http://myself-bbs.com/thread.*")  {
+  
+  .fancybox-skin{
+    padding-top: 15px!important;
+    padding-bottom: 505px!important;
+    padding-right: 55px!important;
+    padding-left: 55px!important;
+    background: #222222!important;}  
+
+  
+  .fancybox-wrap,.fancybox-desktop,.fancybox-type-iframe,.fancybox-opened{
+    width: auto!important;
+    height: auto!important;
+    position: relative!important;
+    top: 0px!important;
+    left: 0px!important;}
+
+  .fancybox-inner{
+    height: 780px!important;
+    width: auto!important;}
+  
+  *{
+    overflow:hidden!important;
+    overflow-y: hidden!important;}
+  
+  
+   .drive-viewer-toolstrip{display:none !important;}
+  
+}
