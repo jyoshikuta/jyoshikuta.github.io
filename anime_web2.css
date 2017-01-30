@@ -16,8 +16,12 @@ body {
 [color="red"]{display:none !important;}
   
 
-.visible-xs-block,.visible-sm-block{display:none !important;}
+.jumbotron{display:none !important;}
 
-  
+.alert-warning {
+    color: #222!important;
+    background-color: #222!important;
+    border-color: #222!important;
+}
   
 }
