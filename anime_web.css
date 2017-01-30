@@ -10,9 +10,7 @@
   
   .head_logo {padding-top: 0px;}
   .head_yn {height: 160px;}
-  
   .c_yt{display:none !important;}
-  
 
 }
 
@@ -24,16 +22,20 @@
     padding-right: 15px!important;
     padding-left: 15px!important;
     background: #222222!important;}  
-
   
   .fancybox-wrap,.fancybox-desktop,.fancybox-type-iframe,.fancybox-opened{
     width: 800px!important;
     height:540px!important;
-   }
+    position: fixed!important;
+    top: 0px!important;
+    left: 0px!important;}
+   
 
   .fancybox-inner{
-    height: 450px!important;
-    width: 800px!important;}
-  
+    height: 500px!important;
+    width: auto!important;}
+
+
   
 }
+
