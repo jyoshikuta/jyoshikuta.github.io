@@ -23,5 +23,29 @@ body {
     background-color: #222!important;
     border-color: #222!important;
 }
+
   
+}
+
+
+@-moz-document regexp(".*oiihk.com/anime/")  {
+  
+img[style*="200px"]{height: 100px !important;width: 100%!important;}
+    
+.col-md-3 { width: 25%!important;}
+    
+.media-body{display:none !important;}
+    
+}
+
+@-moz-document regexp(".*oiihk.com/anime/view.*")  {
+  
+img[style*="200px"]{height: auto !important;width: 200px!important;}
+    
+.col-md-3 { width: 25%!important;}
+    
+.media-body{display:none !important;}
+    
+.alert{display:none !important;}
+    
 }
