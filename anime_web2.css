@@ -16,7 +16,7 @@ body {
 [color="red"]{display:none !important;}
   
 
-.visible-xs-block.visible-sm-block{display:none !important;}
+.visible-xs-block,.visible-sm-block{display:none !important;}
 
   
   
