@@ -17,10 +17,10 @@
 @-moz-document regexp(".*http://myself-bbs.com/thread.*")  {
   
   .fancybox-skin{
-    padding-top: 15px!important;
-    padding-bottom: 15px!important;
-    padding-right: 15px!important;
-    padding-left: 15px!important;
+    padding-top: 1px!important;
+    padding-bottom: 1px!important;
+    padding-right: 1px!important;
+    padding-left: 1px!important;
     background: #222222!important;}  
   
   .fancybox-wrap,.fancybox-desktop,.fancybox-type-iframe,.fancybox-opened{
