@@ -26,7 +26,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-	font-size: 140px;
+	font-size: 200px;
 }
 
 #main2 {
@@ -44,16 +44,6 @@
 	-webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */	
 }
 
- #display2 {
-	text-align:center;
-    border: 1px dashed gray;
-    width: 600px;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-	font-size: 140px;
-} 
  
 input {
     margin: 2px;
