@@ -1,0 +1,33 @@
+#title {
+    border: 1px dashed gray;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    text-align: center;
+}
+ 
+#main {
+    border: 1px dashed gray;
+    width: 500px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+ 
+#display {
+	text-align:center;
+    border: 1px dashed gray;
+    width: 500px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+	font-size: 140px;
+}
+ 
+input {
+    margin: 2px;
+}
