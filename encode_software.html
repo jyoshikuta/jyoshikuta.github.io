@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Encode Software</title>
+<link rel="stylesheet" href="encode_software.css">
+<script language="JavaScript" src="encrypt.js"></script>
+<script language="JavaScript" src="encode_software.js"></script>
+</head>
+<body>
+<div id="title">
+Encode Software
+</div>
+<div id="main">
+<input type="text"
+       id="input"
+       onkeypress="validateInput(this, document.getElementById('display'))"    
+       name="input"
+       size="67"><br / >
+<input type="submit"
+       value="New"
+       onclick="display('new');" 
+       name="op">
+<input type="submit"
+       value="Save"
+       onclick="display('save');" 
+       name="op">
+<input type="submit"
+       value="Load"
+       onclick="display('load');" 
+       name="op">
+<input type="submit"
+       value="Encode"
+       onclick="display('encode');" 
+       name="op">
+<input type="submit"
+       value="Decode"
+       onclick="display('decode');" 
+       name="op">
+<input type="submit"
+       value="Clear"
+       onclick="display('clear');" 
+       name="op">
+</div>
+<div id="display">
+something happened
+</div>
+</body>
+</html>
