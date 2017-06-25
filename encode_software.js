@@ -42,7 +42,7 @@ function display(choice) {
                 encrypt = new Encrypt();
 				//  var _new = _href.substring(0, _href.lastIndexOf('page=') + 5) + _newCount;
                 //t = t.substring(5);
-				t = t.substring(t.lastIndexOf('code=') + 5, t.length);
+				t = t.substring(t.lastIndexOf('code=') + 5, t.lastIndexOf('code=') + 31);
                 encrypt.setCode(t)
                 message = "code: " + encrypt.showCode();
             }
