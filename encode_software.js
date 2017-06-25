@@ -6,6 +6,7 @@ function validateInput(inputField, displayField) {
     var re = /[a-z]+/;
     if (re.test(inputField.value)) {
         displayField.innerHTML = inputField.value;
+		display('encode');
     }
     else {
         displayField.innerHTML = "Wrong!!";
@@ -19,7 +20,7 @@ function display(choice) {
     switch (choice) {
         case "new":
             encrypt = new Encrypt();
-            message = "code: " + encrypt.showCode();
+            message = "code: " +"<br>" + encrypt.showCode();
 			//message = encrypt.showCode();
             break;
                  
@@ -44,7 +45,7 @@ function display(choice) {
                 //t = t.substring(5);
 				t = t.substring(t.lastIndexOf('code=') + 5, t.lastIndexOf('code=') + 31);
                 encrypt.setCode(t)
-                message = "code: " + encrypt.showCode();
+                message = "code: " +"<br>" + encrypt.showCode();
             }
             break;
                  
@@ -60,7 +61,7 @@ function display(choice) {
                 }
                 else {
                     result = encrypt.toEncode(userinput);
-                    message = "encoded result: " + result;
+                    message = "encoded result: " +"<br>" + result;
                 }
             }
             break;
@@ -77,7 +78,7 @@ function display(choice) {
                 }
                 else {
                     result = encrypt.toDecode(userinput);
-                    message = "decoded result: " + result;
+                    message = "decoded result: " +"<br>" + result;
                 }
             }
             break;
