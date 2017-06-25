@@ -20,6 +20,7 @@ function display(choice) {
         case "new":
             encrypt = new Encrypt();
             message = "code: " + encrypt.showCode();
+			//message = encrypt.showCode();
             break;
                  
         case "save":
@@ -39,7 +40,9 @@ function display(choice) {
             }
             else {
                 encrypt = new Encrypt();
-                t = t.substring(5);
+				//  var _new = _href.substring(0, _href.lastIndexOf('page=') + 5) + _newCount;
+                //t = t.substring(5);
+				t = t.substring(t.lastIndexOf('code=') + 5, t.length);
                 encrypt.setCode(t)
                 message = "code: " + encrypt.showCode();
             }
