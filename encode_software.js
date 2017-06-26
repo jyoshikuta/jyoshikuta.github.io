@@ -5,7 +5,7 @@ var result = "";
 function validateInput(inputField, displayField) {
     /*var re = /[a-z]+/;
     if (re.test(inputField.value)) {*/
-        displayField.innerHTML = inputField.value;
+        //displayField.value = inputField.value;
 		display('encode');
     /*}
     else {
@@ -15,13 +15,16 @@ function validateInput(inputField, displayField) {
  
 function display(choice) {
     var message;
+    var message0;
 	var inputField = document.getElementById('input'); 
-    var displayField = document.getElementById('display');
+	var displayField0 = document.getElementById('display00');
+    var displayField = document.getElementById('display1');
     switch (choice) {
         case "new":
 			displayField = document.getElementById('display0');
             encrypt = new Encrypt();
-            message = "code: " +"<br>" + encrypt.showCode();
+			message = encrypt.showCode();
+            //message = "code: " +"<br>" + encrypt.showCode();
 			//message = encrypt.showCode();
             break;
                  
@@ -31,7 +34,8 @@ function display(choice) {
                 message = "No Encrypt object can save!!";
             }
             else {
-                document.cookie = "code=" + encrypt.showCode();
+                //document.cookie = "code=" + encrypt.showCode();
+				document.cookie = "code=" + displayField.value;
                 message = "The code is saved.";
             }
             break;
@@ -48,13 +52,13 @@ function display(choice) {
                 //t = t.substring(5);
 				t = t.substring(t.lastIndexOf('code=') + 5, t.lastIndexOf('code=') + 31+10);
                 encrypt.setCode(t)
-                message = "code: " +"<br>" + encrypt.showCode();
+                message = encrypt.showCode();
             }
             break;
                  
         case "encode":
             userinput = inputField.value.toLowerCase();
-             
+             message0 = "encoded result: ";
             if (userinput == "") {
                 message = "No input string!!";
             }
@@ -64,14 +68,14 @@ function display(choice) {
                 }
                 else {
                     result = encrypt.toEncode(userinput);
-                    message = "encoded result: " +"<br>" + result;
+                    message = result;
                 }
             }
             break;
      
         case "decode":
             userinput = inputField.value.toLowerCase();
-             
+             message0 = "decoded result:";
             if (userinput == "") {
                 message = "No input string!!";
             }
@@ -81,7 +85,7 @@ function display(choice) {
                 }
                 else {
                     result = encrypt.toDecode(userinput);
-                    message = "decoded result: " +"<br>" + result;
+                    message = result;
                 }
             }
             break;
@@ -110,6 +114,6 @@ function display(choice) {
 			displayField = document.getElementById('display0');
             message = "Wrong choice!!";
     }
-     
-    displayField.innerHTML = message.toUpperCase();
+    displayField0.innerHTML = message0;
+    displayField.value = message.toUpperCase();
 }
