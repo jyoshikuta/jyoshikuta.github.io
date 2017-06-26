@@ -3,14 +3,14 @@ var userinput = "";
 var result = "";
  
 function validateInput(inputField, displayField) {
-    var re = /[a-z]+/;
-    if (re.test(inputField.value)) {
+    /*var re = /[a-z]+/;
+    if (re.test(inputField.value)) {*/
         displayField.innerHTML = inputField.value;
 		display('encode');
-    }
+    /*}
     else {
         displayField.innerHTML = "Wrong!!";
-    }
+    }*/
 }
  
 function display(choice) {
@@ -43,7 +43,7 @@ function display(choice) {
                 encrypt = new Encrypt();
 				//  var _new = _href.substring(0, _href.lastIndexOf('page=') + 5) + _newCount;
                 //t = t.substring(5);
-				t = t.substring(t.lastIndexOf('code=') + 5, t.lastIndexOf('code=') + 31);
+				t = t.substring(t.lastIndexOf('code=') + 5, t.lastIndexOf('code=') + 31+10);
                 encrypt.setCode(t)
                 message = "code: " +"<br>" + encrypt.showCode();
             }
