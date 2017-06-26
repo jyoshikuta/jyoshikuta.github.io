@@ -27,6 +27,13 @@ function copyUrl1() {
 	document.execCommand("Copy"); } 
 function clearUrl1(){
      document.getElementById("UTF8").value = "";}
+function copyUrl2() { 
+	var Url1=document.getElementById("display1"); 
+	Url1.select(); 
+	document.execCommand("Copy"); } 
+function clearUrl2(){
+     document.getElementById("display1").value = "";}
+	 
 </script> 
 
 </head>
@@ -68,15 +75,16 @@ Encode Software
 
 
 <div id="display99">
-Code
+Code:
 <br / >  
-<textarea id="display0" name="display0" rows="1" cols="5" style="background: #fff; height: 30px; width: 468px;"></textarea><br / >  
+<textarea id="display0" name="display0" rows="1" cols="5" style="background: #fff; height: 20px; width: 468px;"></textarea><br / >  
 <div id="display00">
 foo
 </div> 
-<textarea id="display1" name="display" rows="1" cols="5" style="background: #fff; height: 30px; width: 468px;"></textarea><br / >  
+<textarea id="display1" name="display" rows="1" cols="5" style="background: #fff; height: 100px; width: 468px;"></textarea><br / >  
+<button onclick="copyUrl2()" value="copy">copy</button>
+<button onclick="clearUrl2()" value="clear">clear</button> 
 </div>
-
 <div id="main2">
 <input type="text"
 	   id="input2"
@@ -87,9 +95,17 @@ foo
        onclick="display('up_UTF8');" 
        name="op">
 <input type="submit"
+       value="down_UTF8"
+       onclick="display('down_UTF8');" 
+       name="op">
+<!-- input type="submit"
        value="up"
        onclick="display('up');" 
        name="op">
+<input type="submit"
+       value="down"
+       onclick="display('down');" 
+       name="op"> -->
 </div>
 
 <div id="main3">

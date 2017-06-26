@@ -24,6 +24,7 @@ function display(choice) {
 			displayField = document.getElementById('display0');
             encrypt = new Encrypt();
 			message = encrypt.showCode();
+			message0 = "foo";
             //message = "code: " +"<br>" + encrypt.showCode();
 			//message = encrypt.showCode();
             break;
@@ -39,7 +40,7 @@ function display(choice) {
             }*/
 			document.cookie = "code=" + displayField.value;
             message = "The code is saved.";
-			
+			message0 = "foo";
             break;
  
         case "load":
@@ -56,6 +57,7 @@ function display(choice) {
                 encrypt.setCode(t)
                 message = encrypt.showCode();
             }
+			message0 = "foo";
             break;
                  
         case "encode":
@@ -98,18 +100,32 @@ function display(choice) {
             encrypt = null;
             userinput = "";
             result = "";
-            message = "It's done.";            
+            message = "It's done.";   
+			message0 = "foo";			
             break;
 			
         case "up":
             document.getElementById("input").value = document.getElementById("input2").value;     
             display('encode');
+			message0 = "foo";
 			break;
 			
         case "up_UTF8":
             document.getElementById("input2").value = document.getElementById("UTF8").value;    
 			document.getElementById("input").value = document.getElementById("UTF8").value;     
             display('encode');
+			message0 = "foo";
+			break;
+			
+        case "down":
+            document.getElementById("input2").value = document.getElementById("input").value;
+			message0 = "foo";
+			break;
+			
+        case "down_UTF8":
+            document.getElementById("UTF8").value = document.getElementById("display1").value;        
+            convertUTF82CP( UTF8.value ); return false;
+			message0 = "foo";
 			break;
 			
         default:
