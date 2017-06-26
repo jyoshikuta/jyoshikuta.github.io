@@ -30,14 +30,16 @@ function display(choice) {
                  
         case "save":
 			displayField = document.getElementById('display0');
-            if (encrypt == null) {
+            /*if (encrypt == null) {
                 message = "No Encrypt object can save!!";
             }
             else {
-                //document.cookie = "code=" + encrypt.showCode();
-				document.cookie = "code=" + displayField.value;
+                document.cookie = "code=" + encrypt.showCode();
                 message = "The code is saved.";
-            }
+            }*/
+			document.cookie = "code=" + displayField.value;
+            message = "The code is saved.";
+			
             break;
  
         case "load":
