@@ -19,12 +19,14 @@ function display(choice) {
     var displayField = document.getElementById('display');
     switch (choice) {
         case "new":
+			displayField = document.getElementById('display0');
             encrypt = new Encrypt();
             message = "code: " +"<br>" + encrypt.showCode();
 			//message = encrypt.showCode();
             break;
                  
         case "save":
+			displayField = document.getElementById('display0');
             if (encrypt == null) {
                 message = "No Encrypt object can save!!";
             }
@@ -35,6 +37,7 @@ function display(choice) {
             break;
  
         case "load":
+			displayField = document.getElementById('display0');
             var t = document.cookie;
             if (t == "") {
                 message = "Load denied!!";
@@ -50,7 +53,7 @@ function display(choice) {
             break;
                  
         case "encode":
-            userinput = inputField.value;
+            userinput = inputField.value.toLowerCase();
              
             if (userinput == "") {
                 message = "No input string!!";
@@ -67,7 +70,7 @@ function display(choice) {
             break;
      
         case "decode":
-            userinput = inputField.value;
+            userinput = inputField.value.toLowerCase();
              
             if (userinput == "") {
                 message = "No input string!!";
@@ -84,16 +87,29 @@ function display(choice) {
             break;
  
         case "clear":
+			displayField = document.getElementById('display0');
             inputField.value = "";
             encrypt = null;
             userinput = "";
             result = "";
             message = "It's done.";            
             break;
-                 
+			
+        case "up":
+            document.getElementById("input").value = document.getElementById("input2").value;     
+            display('encode');
+			break;
+			
+        case "up_UTF8":
+            document.getElementById("input2").value = document.getElementById("UTF8").value;    
+			document.getElementById("input").value = document.getElementById("UTF8").value;     
+            display('encode');
+			break;
+			
         default:
+			displayField = document.getElementById('display0');
             message = "Wrong choice!!";
     }
      
-    displayField.innerHTML = message;
+    displayField.innerHTML = message.toUpperCase();
 }

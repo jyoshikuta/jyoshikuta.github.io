@@ -1,9 +1,34 @@
+<!DOCTYPE html>
+<!--liwenC2017-->
+
 <html>
 <head>
 <title>Encode Software</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <link rel="stylesheet" href="encode_software.css">
+
 <script language="JavaScript" src="encrypt.js"></script>
 <script language="JavaScript" src="encode_software.js"></script>
+<script language="JavaScript1.2" src="Unicode-Converter/Converter.js" type="text/javascript"></script>
+<script type="Text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+<script type="text/javascript"> 
+function copyUrl0() { 
+	var Url0=document.getElementById("chars"); 
+	Url0.select(); 
+	document.execCommand("Copy"); } 
+function clearUrl0(){
+     document.getElementById("chars").value = "";}
+function copyUrl1() { 
+	var Url1=document.getElementById("UTF8"); 
+	Url1.select(); 
+	document.execCommand("Copy"); } 
+function clearUrl1(){
+     document.getElementById("UTF8").value = "";}
+</script> 
+
 </head>
 <body>
 <div id="title">
@@ -12,7 +37,7 @@ Encode Software
 <div id="main">
 <input type="text"
        id="input"
-       onkeypress="validateInput(this, document.getElementById('display'))"    
+       onkeypress="validateInput(this, document.getElementById('display'))"
        name="input"
        size="67"><br / >
 <input type="submit"
@@ -40,8 +65,42 @@ Encode Software
        onclick="display('clear');" 
        name="op">
 </div>
-<div id="display">
-something happened?
+<div id="display0">
+Hello?
 </div>
+<div id="display">
+Hello??
+</div>
+<div id="main2">
+<input type="text"
+       id="input2"
+       name="input2"
+       size="67"><br / >
+<input type="submit"
+       value="up_UTF8"
+       onclick="display('up_UTF8');" 
+       name="op">
+<input type="submit"
+       value="up"
+       onclick="display('up');" 
+       name="op">
+</div>
+
+<div id="main3">
+<textarea id="UTF8" name="UTF8" rows="1" cols="5" style="height: 30px; width: 468px;"></textarea><br / >  
+<button onclick="convertUTF82CP( UTF8.value ); return false;" value="Convert">Convert_chars</button>
+<button onclick="copyUrl1()" value="copy">copy</button>
+<button onclick="clearUrl1()" value="clear">clear</button> 
+ <br / >   
+</div>
+
+<div id="main4">
+<textarea id="chars" name="chars" rows="1" cols="5" style="background: #fff; height: 30px; width: 468px;"></textarea><br / >  
+<button onclick="convertChar2CP( chars.value ); return false;" value="Convert">Convert_UTF8</button>
+<button onclick="copyUrl0()" value="copy">copy</button>
+<button onclick="clearUrl0()" value="clear">clear</button>
+<br / > 
+</div>
+
 </body>
 </html>

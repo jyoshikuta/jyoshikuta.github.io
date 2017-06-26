@@ -25,14 +25,21 @@ Encrypt.prototype.toEncode = function(str) {
     var len = str.length;
     while (i < len) {
         /*var regExp = /^[a-z]+$/;
-        if (regExp.test(str[i])) {*/
+        if (regExp.test(str[i])) {
             var j = this.alph.indexOf(str[i])
             result += this.code[j];
-        /*}
+        }
         else {
             result += str[i];
         }*/
-             
+        var regExp = /\s/;
+        if (regExp.test(str[i])) {
+            result += " ";
+        }
+        else {
+            var j = this.alph.indexOf(str[i])
+            result += this.code[j];
+        }    
         i++;
     }
      
@@ -45,14 +52,21 @@ Encrypt.prototype.toDecode = function(str) {
     var len = str.length;
     while (i < len) {
         /*var regExp = /^[a-z]+$/;
-        if (regExp.test(str[i])) {*/
+        if (regExp.test(str[i])) {
             var j = this.code.indexOf(str[i]);
             result += this.alph[j];
-        /*}
+        }
         else {
             result += str[i];
         }*/
-             
+        var regExp = /\s/;
+        if (regExp.test(str[i])) {
+            result += " ";
+        }
+        else {
+            var j = this.code.indexOf(str[i]);
+            result += this.alph[j];
+        } 
         i++;
     }
      
