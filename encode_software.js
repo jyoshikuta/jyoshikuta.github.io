@@ -38,14 +38,14 @@ function display(choice) {
                 document.cookie = "code=" + encrypt.showCode();
                 message = "The code is saved.";
             }*/
-			document.cookie = "code=" + displayField.value;
+			document.cookie = "code=" + displayField.value.toLowerCase();
             message = "The code is saved.";
 			message0 = "foo";
             break;
  
         case "load":
 			displayField = document.getElementById('display0');
-            var t = document.cookie;
+            var t = document.cookie.toLowerCase();
             if (t == "") {
                 message = "Load denied!!";
             }
@@ -54,7 +54,7 @@ function display(choice) {
 				//  var _new = _href.substring(0, _href.lastIndexOf('page=') + 5) + _newCount;
                 //t = t.substring(5);
 				t = t.substring(t.lastIndexOf('code=') + 5, t.lastIndexOf('code=') + 31+10);
-                encrypt.setCode(t)
+                encrypt.setCode(t);
                 message = encrypt.showCode();
             }
 			message0 = "foo";
