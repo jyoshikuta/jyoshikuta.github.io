@@ -23,10 +23,12 @@
 
 @-moz-document regexp(".*www.ptt.cc.*") {
 
+
 .imgur-embed-iframe-pub {
 	border: 1px #000!important;
 	border-radius: 0!important;
 }
+#app-get,
 #app-apple,
 #app-android,
 #under-image {
