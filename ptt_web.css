@@ -20,3 +20,26 @@
   .bbs-screen {color: hsla(350, 0%, 50%, 0.5);line-height: 100%;word-wrap: break-word;}
   
 }
+
+@-moz-document regexp(".*www.ptt.cc.*") {
+
+.imgur-embed-iframe-pub {
+	border: 1px #000!important;
+	border-radius: 0!important;
+}
+#app-apple,
+#app-android,
+#under-image {
+	display: none !important;
+}
+body {
+	background: black!important;
+	border-radius: 0!important;
+}
+.image {
+	position: relative!important;
+}
+.post {
+	margin: 0px!important;
+}
+}
